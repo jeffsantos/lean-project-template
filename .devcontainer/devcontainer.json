@@ -16,6 +16,9 @@
       }
     }
   },
-  "postCreateCommand": "bash .devcontainer/setup.sh",
+  "remoteEnv": {
+    "PATH": "/home/vscode/.elan/bin:${containerEnv:PATH}"
+  },
+  "postCreateCommand": "bash .devcontainer/setup.sh && source ~/.bashrc",
   "remoteUser": "vscode"
 } 
